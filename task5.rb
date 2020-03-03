@@ -23,14 +23,11 @@ month = gets.chomp.to_i
 puts 'Введите год'
 year = gets.chomp.to_i
 
-if year%400 == 0 || (year%4 == 0 && year%100 != 0)
+if year % 400 == 0 || (year % 4 == 0 && year % 100 != 0)
   months[:february] = 29
 end
 
 total_days = 0
 
-(1..(month-1)).each do |item|
-  total_days += months.to_a[item][1]
-end
-
+total_days = (1..(month-1)).to_a.sum { |item| months.to_a[item][1] }
 puts "Сегодня #{total_days + date}й день этого года"

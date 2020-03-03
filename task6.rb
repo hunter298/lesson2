@@ -16,9 +16,9 @@ puts '--------------------------------------------------------------'
 puts "                        ЧЕК"
 
 sum = 0
-list.each do |key, value|
-  puts "#{key} - #{value[:amount]} шт. по #{value[:price]}$ за штуку = #{value[:amount]*value[:price]}$"
-  sum += (value[:amount]*value[:price])
+list.each do |product, list|
+  puts "#{product} - #{list[:amount]} шт. по #{list[:price]}$ за штуку = #{list[:amount] * list[:price]}$"
+  sum += (list[:amount] * list[:price])
 end
 
 puts '--------------------------------------------------------------'

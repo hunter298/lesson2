@@ -1,6 +1,6 @@
 hash = {}
 
-('a'..'z').each_with_index do |letter, index|
+('a'..'z').each.with_index(1) do |letter, index|
   hash[letter] = index if letter =~ /[aeiou]/
 end
 
